@@ -1,38 +1,232 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+/* ====================== VARIABLES =========================== */
+:root {
+  --primary-background: #1b1a17;
+  --primary-text-color: #fcfcfc;
+  --primary-color: #242f9b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Goldman;
+}
+body {
+  background-color: var(--primary-background);
+  color: var(--primary-text-color);
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M1003.096%2c399.844C1058.04%2c401.638%2c1113.541%2c379.409%2c1141.137%2c331.864C1168.828%2c284.157%2c1160.986%2c224.676%2c1132.014%2c177.736C1104.53%2c133.207%2c1055.418%2c108.983%2c1003.096%2c108.215C949.265%2c107.425%2c894.217%2c127.14%2c867.451%2c173.852C840.809%2c220.347%2c852.257%2c277.385%2c879.835%2c323.331C906.509%2c367.771%2c951.293%2c398.152%2c1003.096%2c399.844' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1073.6878184589896 78.13164312193297L999.1820443008459 11.04634274639892 932.0967439253118 85.55211690454259 1006.6025180834555 152.63741728007665z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M193.81508816608385 263.3697332606039L281.4687411169449 257.24039275454726 275.3394006108883 169.5867398036862 187.68574766002723 175.71608030974284z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M134.77325640176863 228.68504035988394L151.9135506946973 65.6060336043285-11.165456060858133 48.46573931139983-28.305750353786806 211.54474606695527z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1023.119%2c210.2C1045.492%2c211.291%2c1065.183%2c195.709%2c1075.585%2c175.871C1085.286%2c157.369%2c1081.478%2c135.993%2c1071.712%2c117.525C1061.108%2c97.472%2c1045.799%2c77.074%2c1023.119%2c76.658C999.958%2c76.233%2c981.169%2c94.708%2c971.337%2c115.683C962.85%2c133.789%2c969.217%2c153.616%2c978.825%2c171.153C988.961%2c189.654%2c1002.048%2c209.173%2c1023.119%2c210.2' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M495.74059464317855 656.4110741835271L620.0370091555479 572.5720839819573 536.1980189539781 448.2756694695879 411.9016044416087 532.1146596711578z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e"); */
+  /* background-image: url("https://i.imgur.com/PcWpAoQ.jpeg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* =================================Glitched Button======================================== */
+button.glitchButton,
+button.glitchButton::after {
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, transparent 5%, var(--primary-color) 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+button.glitchButton::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "HOVER ME";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    var(--primary-color) 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+button.glitchButton:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+/*==============================Fancy Hover================================== */
+
+.fancy {
+  background-color: transparent;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 0;
+  box-sizing: border-box;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 4em;
+  position: relative;
   text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: var(--primary-color);
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--primary-text-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: var(--primary-color);
+  transition: width 0.5s ease-out, left 0.3s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: var(--primary-color);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: var(--primary-text-color);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: var(--primary-text-color);
+  background: var(--primary-color);
+}
+
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: var(--primary-text-color);
+}
+
+.fancy:hover .text {
+  color: var(--primary-text-color);
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
 }
