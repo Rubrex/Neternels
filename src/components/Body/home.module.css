@@ -36,6 +36,7 @@
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
+    grid-auto-flow: dense;
   }
   .imageContainer {
     margin: 0 auto;

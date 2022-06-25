@@ -5,6 +5,10 @@
   margin: 0 auto;
   padding: 20px 0;
 }
+.header a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
 .logo {
   display: flex;
   align-items: center;
