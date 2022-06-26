@@ -11,7 +11,7 @@ const DeviceInfo = ({ device, codename, status, maintainer, download }) => {
         <p className={styles.codename}>{codename}Ginkgo</p>
         <p className={styles.status}>{status}[Active]</p>
         <p className={styles.maintainer}>Maintainer :</p>
-        <h2>{maintainer}Rubel Hossain</h2>
+        <h2>{maintainer}cyberknight777</h2>
         <button className={styles.hover}> Get Kernel</button>
       </section>
     </div>
