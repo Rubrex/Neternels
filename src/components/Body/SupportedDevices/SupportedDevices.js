@@ -2,9 +2,17 @@ import React from "react";
 import DeviceInfo from "./DeviceInfo";
 import DeviceNames from "./DeviceNames";
 import styles from "./supporteddevice.module.css";
+import { motion } from "framer-motion";
+import { pageVariants } from "../AnimatonStates";
 const SupportedDevices = () => {
   return (
-    <div>
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageVariants.transition}
+    >
       <div className={styles.download_header}>
         <h1>Download NeterNels</h1>
         <p>Get last build by selecting your device below</p>
@@ -24,7 +32,7 @@ const SupportedDevices = () => {
         <DeviceInfo />
         <DeviceInfo />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

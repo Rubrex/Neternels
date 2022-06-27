@@ -2,16 +2,22 @@ import React, { useState } from "react";
 import styles from "./index.module.css";
 import { Sling as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
   console.log(isOpen);
   return (
     <header className={styles.header}>
-      <Link to="/">
-        <div className={styles.logo}>
+      <Link to="./">
+        <motion.div
+          initial={{ y: -200 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 1 }}
+          className={styles.logo}
+        >
           <img src="https://i.imgur.com/o7flkdd.png" />
           <h2>NetErnels</h2>
-        </div>
+        </motion.div>
       </Link>
       <div style={{ zIndex: "11" }}>
         <Hamburger
