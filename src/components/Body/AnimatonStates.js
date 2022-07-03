@@ -1,17 +1,17 @@
 export const pageVariants = {
   initial: {
     opacity: 0,
-    x: "-100vw",
+    scale: 0.9,
   },
   in: {
     opacity: 1,
-    x: "0%",
+    scale: 1,
     transition: {
       x: { type: "spring", stiffness: 80 },
     },
   },
   out: {
     opacity: 0,
-    x: "100vw",
+    scale: 0.9,
   },
 };

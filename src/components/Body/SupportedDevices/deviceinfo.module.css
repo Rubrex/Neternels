@@ -7,15 +7,34 @@
   padding: 20px;
   border-radius: 10px;
   border-radius: 50px;
-  background: #1b1a17;
-  box-shadow: 9px 9px 18px #151412, -9px -9px 18px #21201c;
+  /* background: #1b1a17;
+  box-shadow: 9px 9px 18px #151412, -9px -9px 18px #21201c; */
+
+  /* Glass Effects */
+  /* From https://css.glass */
+  background: rgba(0, 86, 164, 0.12);
+  border-radius: 16px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  border: 1px solid rgba(0, 86, 164, 0.5);
+  /* Glass Effects ends */
   margin-bottom: 60px;
   transition: all 0.3s ease;
 }
 .deviceInfoContainer:hover {
-  border-radius: 44px;
+  /* border-radius: 44px;
   background: linear-gradient(145deg, #181715, #1d1c19);
-  box-shadow: 9px 9px 18px #131311, -9px -9px 18px #23211d;
+  box-shadow: 9px 9px 18px #131311, -9px -9px 18px #23211d; */
+  /* Glass Effects */
+  /* From https://css.glass */
+  background: rgba(1, 32, 61, 0.13);
+  border-radius: 16px;
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  border: 1px solid rgba(1, 32, 61, 0.1);
+  /* Glass Effects ends */
 }
 .imageContainer {
   width: 100%;

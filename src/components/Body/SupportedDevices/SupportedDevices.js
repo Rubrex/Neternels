@@ -12,12 +12,13 @@ const SupportedDevices = () => {
       exit="out"
       variants={pageVariants}
       transition={pageVariants.transition}
+      className={styles.parent}
     >
       <div className={styles.download_header}>
         <h1>Download NeterNels</h1>
         <p>Get last build by selecting your device below</p>
       </div>
-      <hr />
+      <hr className={styles.style_seven} />
       <h2 className={styles.name_header}>Select Your Device</h2>
       <div className={styles.names_container}>
         <DeviceNames name="Xiaomi" />

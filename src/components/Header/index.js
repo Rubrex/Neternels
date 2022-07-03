@@ -29,7 +29,7 @@ const Header = () => {
       {isOpen && (
         <div className={styles.menu}>
           <ul>
-            <li onClick={console.log("Clicked")}>
+            <li>
               <Link to="/supporteddevices" className="fancy">
                 <span className="top-key"></span>
                 <span className="text">Supported Devices</span>
